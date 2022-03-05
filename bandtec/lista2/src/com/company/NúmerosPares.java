@@ -1,14 +1,13 @@
 package com.company;
 
-public class NúmerosImpares {
+public class NúmerosPares {
 
     public static void main(String[] args) {
 
-        for (int i = 0; i < 90; i++) {
-
+        int i = 0;
+        while (i < 40) {
+            i++;
             if (i % 2 == 0) {
-                System.out.println("");
-            } else {
                 System.out.println("Números pares \n" + i);
             }
         }
