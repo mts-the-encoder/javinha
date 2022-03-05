@@ -32,6 +32,5 @@ public class Sorteio {
         }
         System.out.println(String.format("Foram sorteados %d números pares", pares));
         System.out.println(String.format("Foram sorteados %d números impares", impares));
-
     }
 }
