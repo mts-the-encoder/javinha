@@ -6,7 +6,7 @@ public class Potencia {
     public static void main(String[] args) {
 
         System.out.println("Potenciação \n" +
-                            "Digite a base: ");
+                "Digite a base: ");
         Scanner base = new Scanner(System.in);
         int digitoBase = base.nextInt();
         int digitoBase2 = digitoBase;
