@@ -23,6 +23,5 @@ public class Calculadora {
 
         double divisao = (double) digitoUm / digitoDois;
         System.out.printf("Resultado da divisão: \n %.1f%n", divisao);
-
     }
 }
