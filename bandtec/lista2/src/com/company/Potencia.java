@@ -1,27 +1,25 @@
+
 package com.company;
 
 import java.util.Scanner;
 
 public class Potencia {
-    public static void main(String[] args) {
 
-        System.out.println("Potenciação \n" +
-                "Digite a base: ");
-        Scanner base = new Scanner(System.in);
-        int digitoBase = base.nextInt();
-        int digitoBase2 = digitoBase;
+     public static void main(String[] args) {
 
-        System.out.println("Digite o expoente");
-        Scanner expoente = new Scanner(System.in);
-        int digitoExpoente = expoente.nextInt();
+        Scanner leitor = new Scanner(System.in);
 
-        int i = 0;
-        int pot = digitoBase * digitoExpoente;
+        System.out.println("Digite o valor base:");
+        Integer base = leitor.nextInt();
+        Integer total = base;
 
-        while (i < digitoExpoente) {
-            digitoBase += digitoBase2;
-            i++;
+        System.out.println("Digite o expoente:");
+        Integer expoente = leitor.nextInt();
+
+        for (Integer i = 1; i < expoente; i++) {
+            total *= base;
         }
-        System.out.println(pot);
+
+        System.out.println("\n" + total);
     }
 }
