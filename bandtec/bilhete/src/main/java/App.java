@@ -9,8 +9,28 @@ public class App {
 
         bilhete1.carregar(60.00);
         bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
+        bilhete1.usar();
         bilhete1.exibirStatus();
-
         BilheteUnico bilhete2 = new BilheteUnico();
 
         bilhete2.nome = "James";
@@ -18,6 +38,17 @@ public class App {
 
         bilhete2.carregar(745.00);
         bilhete2.usar();
+        bilhete2.usar();
+        bilhete2.usar();
         bilhete2.exibirStatus();
+
+        BilheteUnico bilhete3 = new BilheteUnico();
+
+        bilhete3.nome = "Mary";
+        bilhete3.saldo = 0.00;
+
+        bilhete3.carregar(2.00);
+        bilhete3.usar();
+        bilhete3.exibirStatus();
     }
 }
