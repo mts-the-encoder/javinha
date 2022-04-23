@@ -48,6 +48,8 @@ public class Planejamento {
     public void terminarAtividade(Integer diasUsados) {
         this.diasUsados = diasUsados;
     }
+
+
     public String calcularTempo() {
         Integer diasAtrasados = diasUsados - diasEstimados;
         Integer diasSobrando = diasEstimados - diasUsados;
