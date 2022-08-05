@@ -8,22 +8,25 @@ public class AlunoFundamental extends Aluno {
 
     public AlunoFundamental(Integer ra, String name, Double nota1, Double nota2, Double nota3, Double nota4) {
         super(ra, name);
-        this.nota1 = nota1;
-        this.nota2 = nota2;
-        this.nota3 = nota3;
-        this.nota4 = nota4;
+        if(nota1 < 0 || nota2 < 0 || nota3 < 0 || nota4 < 0){
+            System.out.println("Nota deve ser maior que 0");
+        } else {
+            this.nota1 = nota1;
+            this.nota2 = nota2;
+            this.nota3 = nota3;
+            this.nota4 = nota4;
+        }
     }
 
     @Override
     public Double calcularMedia() {
-        Double avg = (nota1 + nota2 + nota3 + nota4) / 4;
-        return avg;
+        return (nota1 + nota2 + nota3 + nota4) / 4;
     }
 
     @Override
     public String toString() {
         return String.format("Aluno Fundamental %s, notas: %.2f, %.2f, %.2f, %.2f, e Média Final = %.2f",
-                super.getNome(), nota1, nota2, nota3, nota4, calcularMedia().toString());
+                super.getNome(), nota1, nota2, nota3, nota4, calcularMedia());
     }
 
     public Double getNota1() {

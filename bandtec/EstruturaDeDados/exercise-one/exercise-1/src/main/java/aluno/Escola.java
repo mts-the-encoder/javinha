@@ -12,23 +12,41 @@ public class Escola {
     }
 
     public void addAluno(Aluno student){
-
+        students.add(student);
+        System.out.println(String.format("Adicionando o aluno %s", getNome()));
     }
 
     public void exibeTodos(){
-
+        for (Aluno student : students) {
+            System.out.println(student);
+        }
     }
 
     public void exibeAlunosGraduacao(){
-
+        for (Aluno student : students) {
+            if(student instanceof AlunoGraduacao){
+                System.out.println(student);
+            }
+        }
     }
 
-    public void exibeReprovados(){
-
+    public void exibeAprovados(){
+        for (Aluno student : students) {
+            if(student.calcularMedia() >= 6){
+                System.out.println("Aprovados: \n" + student);
+            }
+        }
     }
 
-    public void buscaAluno(){
-
+    public void buscaAluno(Integer ra){
+        for (Aluno student : students) {
+            if(ra.equals(student.getRa())){
+                System.out.println(student);
+            }
+            else {
+                System.out.println("Aluno não encontrado");
+            }
+        }
     }
 
     public String getNome() {
