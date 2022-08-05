@@ -1,19 +1,19 @@
 package aluno;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Escola {
     private String nome;
     private List<Aluno> students;
 
-    public Escola(String nome, List<Aluno> students) {
+    public Escola(String nome) {
         this.nome = nome;
-        this.students = students;
+        students = new ArrayList<Aluno>();
     }
 
     public void addAluno(Aluno student){
         students.add(student);
-        System.out.println(String.format("Adicionando o aluno %s", getNome()));
     }
 
     public void exibeTodos(){
@@ -40,13 +40,14 @@ public class Escola {
 
     public void buscaAluno(Integer ra){
         for (Aluno student : students) {
-            if(ra.equals(student.getRa())){
+            if(student.getRa().equals(ra)){
                 System.out.println(student);
             }
-            else {
+            if(students.contains(ra)){
                 System.out.println("Aluno não encontrado");
             }
         }
+
     }
 
     public String getNome() {
