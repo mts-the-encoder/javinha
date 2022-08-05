@@ -15,8 +15,10 @@ public class App {
         school.addAluno(af);
         school.addAluno(ap);
 
-
-        school.buscaAluno(00);
+        school.exibeTodos();
+        school.exibeAlunosGraduacao();
+        school.exibeAprovados();
+        school.buscaAluno(04);
         school.buscaAluno(01);
     }
 }
