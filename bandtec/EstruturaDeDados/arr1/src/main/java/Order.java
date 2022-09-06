@@ -1,14 +1,10 @@
 public class Order {
     public static void main(String[] args) {
-        int[] arr = { 2, 5, 5, 44, 8, 3, 9, 0, 1, 2, 93, 6};
+        int[] arr = { 13, 5, 7, 44, 8, 23, 9, 0, 1, 14, 3, 6};
         selectionSort(arr);
-        System.out.println();
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
     }
 
-    public static int[] selectionSort(int[] arr) {
+    public static void selectionSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             int x = 0;
             for (int j = 0; j < arr.length; j++) {
@@ -19,6 +15,8 @@ public class Order {
                 }
             }
         }
-        return arr;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
     }
 }
