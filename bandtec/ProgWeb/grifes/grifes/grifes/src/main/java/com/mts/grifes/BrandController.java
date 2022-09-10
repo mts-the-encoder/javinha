@@ -46,6 +46,30 @@ public class BrandController {
         return "Não encontrada";
     }
 
+    @GetMapping("/{posicao}/cotas/{quantidade}/{chaveAcesso}")
+    public Integer
+    getCotas(@PathVariable int posicao,
+                        @PathVariable int quantidade,
+                        @PathVariable String chaveAcesso) {
+        for (int i = 0; i < brands.size(); i++) {
+            if (i == posicao && brands.get(i).getChaveAcesso() == chaveAcesso) {
+                return quantidade * brands.get(i).getValorAcaoBolsa();
+            }
+        }
+        return null;
+    }
+
+    @GetMapping("/populares")
+    public List<Brand> getPopulaBrands() {
+        List<Brand> populars = new ArrayList<Brand>();
+        for (Brand b : brands) {
+            if (b.getValorAcaoBolsa() < 15) {
+                populars.add(b);
+            }
+        }
+        return populars;
+    }
+
     public List<Brand> getBrands() {
         return brands;
     }
